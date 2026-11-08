@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Контакты и запись — Улыбка Волги</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ПОМЕТКА: сайт учебный, клиника вымышленная -->
+  <div class="demo-banner">Учебный проект: клиника вымышленная, все данные придуманы.</div>
+
+  <!-- ШАПКА: такая же, как на других страницах -->
+  <header>
+    <p>Улыбка Волги</p>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="uslugi.html">Услуги и цены</a>
+      <a href="vrachi.html">Врачи и клиника</a>
+      <a href="kontakty.html">Контакты</a>
+    </nav>
+    <a href="tel:+70000000000">8 (000) 000-00-00</a>
+  </header>
+
+  <main>
+
+    <section>
+      <h1>Как нас найти и записаться</h1>
+      <p>Позвоните нам или оставьте заявку внизу страницы.</p>
+    </section>
+
+    <section>
+      <h2>Контакты</h2>
+      <!-- Адрес и телефон — заглушки, в реальном проекте здесь данные клиники -->
+      <p><strong>Адрес:</strong> Жигулевск, ул. Примерная, 1</p>
+      <p><strong>Телефон:</strong> <a href="tel:+70000000000">8 (000) 000-00-00</a></p>
+      <p><strong>Часы работы:</strong> пн–пт 9:00–19:00, сб 10:00–15:00, вс выходной</p>
+    </section>
+
+    <section>
+      <h2>Как добраться</h2>
+      <!-- Здесь будет карта и описание пути от ближайшей остановки.
+           Адрес выдуманный, поэтому карту пока не подключаем. -->
+      <p>Здесь будет карта проезда и пара слов о том, как дойти от ближайшей остановки.</p>
+    </section>
+
+    <section>
+      <h2>Запись на приём</h2>
+      <p>Оставьте телефон, и мы перезвоним вам в рабочее время, чтобы подобрать время приёма.</p>
+
+      <!-- ФОРМА: пока только внешний вид. Отправлять данные она никуда не умеет —
+           для этого нужен сервер, это отдельная тема. -->
+      <form action="#" method="post">
+
+        <p>
+          <label for="name">Имя</label><br>
+          <input type="text" id="name" name="name" required>
+        </p>
+
+        <p>
+          <label for="phone">Телефон</label><br>
+          <input type="tel" id="phone" name="phone" required>
+        </p>
+
+        <p>
+          <label for="time">Удобное время</label><br>
+          <input type="text" id="time" name="time">
+        </p>
+
+        <p>
+          <label for="comment">Комментарий</label><br>
+          <textarea id="comment" name="comment" rows="4"></textarea>
+        </p>
+
+        <p>
+          <input type="checkbox" id="agree" name="agree" required>
+          <label for="agree">Я даю согласие клинике «Улыбка Волги» на обработку моего имени и телефона, чтобы со мной связались и согласовали время приёма, в соответствии с <a href="politika.html">Политикой обработки персональных данных</a>. Согласие можно отозвать, написав на электронную почту клиники (адрес указан на странице <a href="svedeniya.html">«Сведения об организации»</a>).</label>
+        </p>
+
+        <button type="submit" class="button">Отправить заявку</button>
+
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ПОДВАЛ: такой же, как на других страницах -->
+  <footer>
+    <p>Жигулевск, ул. Примерная, 1</p>
+    <p>Телефон: 8 (000) 000-00-00</p>
+    <p>Пн–пт 9:00–19:00, сб 10:00–15:00, вс выходной</p>
+    <p>Имеются противопоказания, необходима консультация специалиста.</p>
+    <p><a href="svedeniya.html">Сведения об организации</a> · <a href="politika.html">Политика обработки персональных данных</a></p>
+  </footer>
+
+</body>
+</html>

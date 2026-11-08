@@ -1,0 +1,119 @@
+/* ЦВЕТА: задаём один раз, дальше используем по имени */
+:root {
+  --main: #0F4A70;        /* тёмно-синий: кнопки, заголовки, ссылки */
+  --main-dark: #0A3552;   /* при наведении на кнопку */
+  --soft: #F1E7D6;        /* светлый фон блоков */
+  --page: #FBF8F3;        /* фон страницы */
+  --text: #1F2A37;        /* основной текст */
+  --line: #7A8794;        /* рамки полей формы */
+  --notice: #F6E7A8;      /* плашка «учебный проект» */
+}
+
+/* ОБЩЕЕ: шрифт, размер, фон */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--page);
+}
+
+/* ПЛАШКА: сайт учебный */
+.demo-banner {
+  padding: 8px 16px;
+  background: var(--notice);
+  color: var(--text);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* ШАПКА */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+  padding: 16px 24px;
+  background: #0F4A70;
+  border-bottom: 1px solid var(--soft);
+}
+header > p { margin: 0; font-size: 1.4rem; font-weight: 700; color: #fff; }
+nav a { margin-right: 20px; color: #fff; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+header > a { font-weight: 700; color: #fff; text-decoration: none; }
+
+/* ОСНОВНОЕ: колонка по центру, не шире 960 пикселей */
+main { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+section { padding: 36px 0; }
+h1 { margin: 0 0 16px; font-size: 2.2rem; line-height: 1.2; color: var(--main); }
+h2 { margin: 0 0 12px; font-size: 1.6rem; color: var(--main); }
+h3 { margin: 24px 0 4px; font-size: 1.3rem; color: var(--main); }
+ul, ol { padding-left: 1.3em; }
+li { margin-bottom: 8px; }
+main a { color: var(--main); }
+
+/* ПЕРВЫЙ БЛОК: выделенный, с кнопкой */
+main > section:first-child {
+  margin-top: 24px;
+  padding: 48px 32px;
+  background: #fff;
+  border-radius: 12px;
+}
+main > section:first-child a {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 14px 28px;
+  background: var(--main);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+}
+main > section:first-child a:hover { background: var(--main-dark); }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--text);
+  outline-offset: 3px;
+}
+
+/* КНОПКА: любая ссылка или <button> с class="button" */
+.button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 14px 28px;
+  background: var(--main);
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button:hover { background: var(--main-dark); }
+
+/* ФОРМА: поля того же размера, что и текст сайта */
+input[type="text"], input[type="tel"], textarea {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 420px;
+  padding: 10px;
+  background: #fff;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font: inherit;
+}
+
+/* ПОДВАЛ */
+footer { padding: 32px 24px; background: var(--text); color: var(--page); text-align: center; }
+footer p { margin: 4px 0; }
+footer a { color: var(--page); }
+
+/* ТЕЛЕФОН: на узких экранах чуть меньше и шапка колонкой */
+@media (max-width: 600px) {
+  h1 { font-size: 1.8rem; }
+  header { flex-direction: column; align-items: flex-start; }
+  main > section:first-child { padding: 32px 20px; }
+}
