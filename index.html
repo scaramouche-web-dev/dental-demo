@@ -3,85 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
   <title>Улыбка Волги — стоматологическая клиника в Жигулевске</title>
-  <style>
-    /* ЦВЕТА: задаём один раз, дальше используем по имени */
-    :root {
-      --main: #0F4A70;        /* тёмная бирюза: кнопки, заголовки, ссылки */
-      --main-dark: #0A3552;   /* при наведении на кнопку */
-      --soft: #F1E7D6;        /* светлый фон блоков */
-      --page: #FBF8F3;        /* фон страницы */
-      --text: #1F2A37;        /* основной текст */
-    }
-
-    /* ОБЩЕЕ: шрифт, размер, фон */
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-      font-size: 18px;
-      line-height: 1.6;
-      color: var(--text);
-      background: var(--page);
-    }
-
-    /* ШАПКА */
-    header {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px 24px;
-      padding: 16px 24px;
-      background: #0F4A70;
-      border-bottom: 1px solid var(--soft);
-    }
-    header > p { margin: 0; font-size: 1.4rem; font-weight: 700; color: #fff; }
-    nav a { margin-right: 20px; color: #fff; text-decoration: none; }
-    nav a:hover { text-decoration: underline; }
-    header > a { font-weight: 700; color: #fff; text-decoration: none; }
-
-    /* ОСНОВНОЕ: колонка по центру, не шире 960 пикселей */
-    main { max-width: 960px; margin: 0 auto; padding: 0 24px; }
-    section { padding: 36px 0; }
-    h1 { margin: 0 0 16px; font-size: 2.2rem; line-height: 1.2; color: var(--main); }
-    h2 { margin: 0 0 12px; font-size: 1.6rem; color: var(--main); }
-    ul, ol { padding-left: 1.3em; }
-    li { margin-bottom: 8px; }
-    main a { color: var(--main); }
-
-    /* ПЕРВЫЙ БЛОК: выделенный, с кнопкой */
-    main > section:first-child {
-      margin-top: 24px;
-      padding: 48px 32px;
-      background: var(--soft);
-      border-radius: 12px;
-    }
-    main > section:first-child a {
-      display: inline-block;
-      margin-top: 8px;
-      padding: 14px 28px;
-      background: var(--main);
-      color: #fff;
-      font-weight: 600;
-      text-decoration: none;
-      border-radius: 8px;
-    }
-    main > section:first-child a:hover { background: var(--main-dark); }
-    a:focus-visible { outline: 3px solid var(--text); outline-offset: 3px; }
-
-    /* ПОДВАЛ */
-    footer { padding: 32px 24px; background: var(--text); color: var(--page); text-align: center; }
-    footer p { margin: 4px 0; }
-
-    /* ТЕЛЕФОН: на узких экранах чуть меньше и шапка колонкой */
-    @media (max-width: 600px) {
-      h1 { font-size: 1.8rem; }
-      header { flex-direction: column; align-items: flex-start; }
-      main > section:first-child { padding: 32px 20px; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- ПОМЕТКА: сайт учебный, клиника вымышленная -->
+  <div class="demo-banner">Учебный проект: клиника вымышленная, все данные придуманы.</div>
 
   <!-- ШАПКА: название и меню -->
   <header>
@@ -137,6 +66,8 @@
     <p>Жигулевск, ул. Примерная, 1</p>
     <p>Телефон: 8 (000) 000-00-00</p>
     <p>Пн–пт 9:00–19:00, сб 10:00–15:00, вс выходной</p>
+    <p>Имеются противопоказания, необходима консультация специалиста.</p>
+    <p><a href="svedeniya.html">Сведения об организации</a> · <a href="politika.html">Политика обработки персональных данных</a></p>
   </footer>
 
 </body>
